@@ -31,8 +31,8 @@ To use this template, your computer needs:
     
 ## Fields
 
-Field | Type | Description | Example | value
---- | --- | --- | --- | ---
+Field | Type | Description | Example value
+--- | --- | --- | --- |
 cart_value | Integer | Value of the shopping cart in cents. | 790 (790 cents = 7.90€)
 delivery_distance | Integer | The distance between the store and customer’s location in meters. | 2235 (2235 meters = 2.235 km)
 number_of_items | Integer | The number of items in the customer's shopping cart. | 4 (customer has 4 items in the cart)
