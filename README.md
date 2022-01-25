@@ -4,7 +4,7 @@ A simple flask app for calculating delivery fees
 ## Installation
 To use this template, your computer needs:
 
-- [Python 2 or 3] (https://python.org)
+- [Python 2 or 3](https://python.org)
 - [Pip Package Manager](https://pypi.python.org/pypi)
 
 ## Running the app
