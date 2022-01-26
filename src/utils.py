@@ -1,8 +1,8 @@
-from datetime import datetime, time
+from datetime import datetime
 
 def is_time_between(begin_time, end_time, check_time=None):
     '''
-    Checks if given datetime is between a range of two other datetimes
+    Checks if given time() is between a range of two other times()
     '''
     
     # If check time is not given, default to current UTC time

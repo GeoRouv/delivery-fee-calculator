@@ -9,7 +9,7 @@ class Cart(Resource):
         self.cart_value = request.json["cart_value"]
         self.delivery_distance = request.json["delivery_distance"]
         self.number_of_items = request.json["number_of_items"]
-        self.time = request.json["time"]
+        self.time = datetime.strptime(request.json["time"],"%Y-%m-%dT%H:%M:%S%z")
         self.delivery_fee = 0
 
     def small_price_fee(self):
@@ -31,8 +31,8 @@ class Cart(Resource):
         During the Friday rush (3 - 7 PM UTC), the delivery fee (the total fee including possible surcharges) will be multiplied by 1.1x. H
         owever, the fee still cannot be more than the max (15€).
         '''
-        if datetime.today().weekday() == 4:
-            if is_time_between(time(15, 00), time(19, 00), self.time):
+        if self.time.weekday() == 4:
+            if is_time_between(time(15, 00), time(19, 00), self.time.time()):
                 self.delivery_fee *= 1.1
                 self.check_fee_threshold()
 
